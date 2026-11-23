@@ -108,18 +108,18 @@ Ruyo requests with `redirect: 'manual'` and follows up to 10 redirects itself, s
 
 ## Fonts
 
-X cards use fonts bundled with `@ruyo/x`. Other cards use the system UI font of the machine running Node.js, fall back to other installed fonts for missing characters, and use its default monospace font for code.
+X cards use fonts bundled with `@ruyojs/x`. Other cards use the system UI font of the machine running Node.js, fall back to other installed fonts for missing characters, and use its default monospace font for code.
 
 On Linux, Ruyo finds fonts through Fontconfig (`fc-match`). Install fonts that cover the scripts and emoji you need, such as Noto Sans CJK and Noto Color Emoji.
 
 ## Choosing adapters
 
-The `ruyo` package includes all four platforms. To include only some, combine `@ruyo/core` with the adapters you need:
+The `ruyo` package includes all four platforms. To include only some, combine `@ruyojs/core` with the adapters you need:
 
 ```ts
-import { createRenderer } from '@ruyo/core'
-import { githubAdapter } from '@ruyo/github'
-import { xAdapter } from '@ruyo/x'
+import { createRenderer } from '@ruyojs/core'
+import { githubAdapter } from '@ruyojs/github'
+import { xAdapter } from '@ruyojs/x'
 
 const { render } = createRenderer({ adapters: [xAdapter, githubAdapter] })
 const { png } = await render('https://x.com/jack/status/20', { width: 480 })
@@ -129,18 +129,18 @@ Adapters are tried in order, and the first one that recognizes the link renders 
 
 | Package | Export |
 |---|---|
-| `@ruyo/x` | `xAdapter` |
-| `@ruyo/bilibili` | `bilibiliAdapter` |
-| `@ruyo/github` | `githubAdapter` |
-| `@ruyo/youtube` | `youtubeAdapter` |
+| `@ruyojs/x` | `xAdapter` |
+| `@ruyojs/bilibili` | `bilibiliAdapter` |
+| `@ruyojs/github` | `githubAdapter` |
+| `@ruyojs/youtube` | `youtubeAdapter` |
 
 ## Writing an adapter
 
 This adapter renders the page title of `example.com` links:
 
 ```ts
-import { createRenderer, type Adapter, type NetworkHost, type ResolvedCard } from '@ruyo/core'
-import { request } from '@ruyo/core/adapter'
+import { createRenderer, type Adapter, type NetworkHost, type ResolvedCard } from '@ruyojs/core'
+import { request } from '@ruyojs/core/adapter'
 
 async function titleCard(url: URL, host?: NetworkHost): Promise<ResolvedCard> {
   const html = await (await request(url.href, {}, host)).text()
@@ -169,7 +169,7 @@ const { render } = createRenderer({ adapters: [titleAdapter] })
 - `assets` maps keys to image bytes. `image` items refer to them by `src`.
 - `layout(width, context)` returns the card's `height` and the `items` to draw in order: `text`, `rect`, `image`, or `svg`. All sizes are in CSS pixels.
 - `context.prepareText()` lays out a paragraph and returns its size, so you can place content below it. `context.imageSize(src)` returns an image's natural size.
-- `@ruyo/core/adapter` provides `request`, `loadImage`, and `loadImages`. They go through `host` and turn HTTP failures into `RuyoError`s.
+- `@ruyojs/core/adapter` provides `request`, `loadImage`, and `loadImages`. They go through `host` and turn HTTP failures into `RuyoError`s.
 - Set `maxWidth` to cap the card width, or `fonts` to use bundled font files before system fonts.
 
 ## Build from source
@@ -196,7 +196,7 @@ pnpm add link:/path/to/Ruyo/packages/ruyo
 
 Ruyo is released under the [MIT License](LICENSE).
 
-- X carousel sizing, X icons, and rounded corner paths are adapted from [xeet](https://github.com/rauchg/xeet/blob/095ba15/crates/xeet-core/src/cards/media.rs) (Apache-2.0). The license ships with `@ruyo/x` and `@ruyo/core`.
+- X carousel sizing, X icons, and rounded corner paths are adapted from [xeet](https://github.com/rauchg/xeet/blob/095ba15/crates/xeet-core/src/cards/media.rs) (Apache-2.0). The license ships with `@ruyojs/x` and `@ruyojs/core`.
 - GitHub icons are from [Octicons](https://github.com/primer/octicons) (MIT). See `packages/github/licenses/octicons.txt`.
 - Text layout uses [Takumi](https://github.com/kane50613/takumi), and drawing uses [tiny-skia](https://github.com/linebender/tiny-skia).
-- Chirp, Arial, Apple Color Emoji, and Hiragino Sans fonts bundled with `@ruyo/x` remain under their owners' terms and aren't covered by Ruyo's license. See [X fonts](packages/x/fonts/README.md).
+- Chirp, Arial, Apple Color Emoji, and Hiragino Sans fonts bundled with `@ruyojs/x` remain under their owners' terms and aren't covered by Ruyo's license. See [X fonts](packages/x/fonts/README.md).

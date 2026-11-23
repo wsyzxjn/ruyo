@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
-import type { AdapterFontFace } from '@ruyo/core'
-import type { Run } from '@ruyo/core/adapter'
+import type { AdapterFontFace } from '@ruyojs/core'
+import type { Run } from '@ruyojs/core/adapter'
 
 interface Face extends Omit<AdapterFontFace, 'file' | 'ranges'> {
   file: string

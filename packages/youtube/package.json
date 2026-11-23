@@ -1,5 +1,5 @@
 {
-  "name": "@ruyo/youtube",
+  "name": "@ruyojs/youtube",
   "version": "0.1.0",
   "description": "YouTube adapter for Ruyo: render YouTube videos and Shorts as PNG cards",
   "keywords": [
@@ -38,10 +38,10 @@
     "test": "node --test test/*.test.mjs"
   },
   "peerDependencies": {
-    "@ruyo/core": "workspace:^"
+    "@ruyojs/core": "workspace:^"
   },
   "devDependencies": {
-    "@ruyo/core": "workspace:^"
+    "@ruyojs/core": "workspace:^"
   },
   "imports": {
     "#wasm": "./wasm/ruyo_youtube.js"

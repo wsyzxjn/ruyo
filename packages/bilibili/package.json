@@ -1,5 +1,5 @@
 {
-  "name": "@ruyo/bilibili",
+  "name": "@ruyojs/bilibili",
   "version": "0.1.0",
   "description": "Bilibili adapter for Ruyo: render Bilibili videos and dynamics as PNG cards",
   "keywords": [
@@ -39,10 +39,10 @@
     "test": "node --test test/*.test.mjs"
   },
   "peerDependencies": {
-    "@ruyo/core": "workspace:^"
+    "@ruyojs/core": "workspace:^"
   },
   "devDependencies": {
-    "@ruyo/core": "workspace:^"
+    "@ruyojs/core": "workspace:^"
   },
   "imports": {
     "#wasm": "./wasm/ruyo_bilibili.js"

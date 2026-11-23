@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { inspectLayout, sampleImage } from '../../../test/inspect-layout.mjs'
 import { test } from 'node:test'
-import { xAdapter } from '@ruyo/x'
+import { xAdapter } from '@ruyojs/x'
 
 const id = '9007199254740993123'
 const xUrl = 'https://x.com/example/status/' + id

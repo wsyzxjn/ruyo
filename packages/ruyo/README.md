@@ -34,7 +34,7 @@ await writeFile('card.png', png)
 - **GitHub**: repositories, issues, pull requests, releases, commits, discussions, and profiles
 - **YouTube**: videos and Shorts that allow embedding
 
-See [@ruyo/x](https://www.npmjs.com/package/@ruyo/x), [@ruyo/bilibili](https://www.npmjs.com/package/@ruyo/bilibili), [@ruyo/github](https://www.npmjs.com/package/@ruyo/github), and [@ruyo/youtube](https://www.npmjs.com/package/@ruyo/youtube) for link formats and what each card shows.
+See [@ruyojs/x](https://www.npmjs.com/package/@ruyojs/x), [@ruyojs/bilibili](https://www.npmjs.com/package/@ruyojs/bilibili), [@ruyojs/github](https://www.npmjs.com/package/@ruyojs/github), and [@ruyojs/youtube](https://www.npmjs.com/package/@ruyojs/youtube) for link formats and what each card shows.
 
 ## Errors
 
@@ -75,8 +75,8 @@ Ruyo follows up to 10 redirects itself, so your `fetch` must return redirect res
 
 ## Fonts
 
-X cards use fonts bundled with `@ruyo/x`. Other cards use the system fonts of the machine running Node.js. On Linux, Ruyo finds them through Fontconfig, so install fonts for the scripts and emoji you need, such as Noto Sans CJK and Noto Color Emoji.
+X cards use fonts bundled with `@ruyojs/x`. Other cards use the system fonts of the machine running Node.js. On Linux, Ruyo finds them through Fontconfig, so install fonts for the scripts and emoji you need, such as Noto Sans CJK and Noto Color Emoji.
 
 ## Only some platforms
 
-`ruyo` includes every adapter. To include only some, or to add your own, use [@ruyo/core](https://www.npmjs.com/package/@ruyo/core).
+`ruyo` includes every adapter. To include only some, or to add your own, use [@ruyojs/core](https://www.npmjs.com/package/@ruyojs/core).

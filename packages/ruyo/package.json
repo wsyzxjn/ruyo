@@ -41,10 +41,10 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
-    "@ruyo/core": "workspace:^",
-    "@ruyo/x": "workspace:^",
-    "@ruyo/bilibili": "workspace:^",
-    "@ruyo/github": "workspace:^",
-    "@ruyo/youtube": "workspace:^"
+    "@ruyojs/core": "workspace:^",
+    "@ruyojs/x": "workspace:^",
+    "@ruyojs/bilibili": "workspace:^",
+    "@ruyojs/github": "workspace:^",
+    "@ruyojs/youtube": "workspace:^"
   }
 }

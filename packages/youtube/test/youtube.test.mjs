@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { createRenderer } from '@ruyo/core'
-import { youtubeAdapter } from '@ruyo/youtube'
+import { createRenderer } from '@ruyojs/core'
+import { youtubeAdapter } from '@ruyojs/youtube'
 import { inspectLayout, sampleImage } from '../../../test/inspect-layout.mjs'
 
 const id = 'aB3_-dEFg12'

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { githubAdapter } from '@ruyo/github'
+import { githubAdapter } from '@ruyojs/github'
 import { inspectLayout, sampleImage } from '../../../test/inspect-layout.mjs'
 
 const avatar = 'https://avatars.githubusercontent.com/u/42'

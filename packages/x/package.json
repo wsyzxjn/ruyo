@@ -1,5 +1,5 @@
 {
-  "name": "@ruyo/x",
+  "name": "@ruyojs/x",
   "version": "0.1.0",
   "description": "X (Twitter) adapter for Ruyo: render X posts as PNG cards",
   "keywords": [
@@ -43,10 +43,10 @@
     "test": "node --test test/*.test.mjs"
   },
   "peerDependencies": {
-    "@ruyo/core": "workspace:^"
+    "@ruyojs/core": "workspace:^"
   },
   "devDependencies": {
-    "@ruyo/core": "workspace:^"
+    "@ruyojs/core": "workspace:^"
   },
   "imports": {
     "#wasm": "./wasm/ruyo_x.js"

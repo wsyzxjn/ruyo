@@ -1,5 +1,5 @@
-import { RuyoError, type NetworkHost, type ResolvedCard, type PrepareText } from '@ruyo/core'
-import { loadImages } from '@ruyo/core/adapter'
+import { RuyoError, type NetworkHost, type ResolvedCard, type PrepareText } from '@ruyojs/core'
+import { loadImages } from '@ruyojs/core/adapter'
 import { countText, detail, imageUrl, statOrder } from './api.js'
 
 export interface VideoPreview {

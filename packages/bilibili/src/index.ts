@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
-import { RuyoError, type Adapter, type NetworkHost, type PrepareText, type ResolvedCard } from '@ruyo/core'
-import { request, loadImage, loadImages, type Run, type Photo } from '@ruyo/core/adapter'
+import { RuyoError, type Adapter, type NetworkHost, type PrepareText, type ResolvedCard } from '@ruyojs/core'
+import { request, loadImage, loadImages, type Run, type Photo } from '@ruyojs/core/adapter'
 
 import { detail, imageUrl, countText, statOrder, type StatKind } from './api.js'
 import { archivePreview, videoCard, type Archive, type VideoPreview } from './video.js'

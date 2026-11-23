@@ -1,4 +1,4 @@
-import { RuyoError, type NetworkHost } from '@ruyo/core'
+import { RuyoError, type NetworkHost } from '@ruyojs/core'
 import { displayUrl, excerpt, formatCount, read, type Actor, type Preview } from './api.js'
 
 import { article, reactionChips } from './details.js'

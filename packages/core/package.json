@@ -1,5 +1,5 @@
 {
-  "name": "@ruyo/core",
+  "name": "@ruyojs/core",
   "version": "0.1.0",
   "description": "Renderer and adapter API behind Ruyo link preview cards",
   "keywords": [

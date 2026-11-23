@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { fonts, splitEmoji } from './fonts.js'
-import { RuyoError, type Adapter, type NetworkHost, type RenderOptions } from '@ruyo/core'
-import { request, loadImage, type Run, type Photo } from '@ruyo/core/adapter'
+import { RuyoError, type Adapter, type NetworkHost, type RenderOptions } from '@ruyojs/core'
+import { request, loadImage, type Run, type Photo } from '@ruyojs/core/adapter'
 
 const defaultAvatar = 'ruyo:x/default-avatar'
 

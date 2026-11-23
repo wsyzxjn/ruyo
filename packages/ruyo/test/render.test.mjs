@@ -72,9 +72,9 @@ test('both adapters reach the same renderer; preserve rich text, photos, long ID
 })
 
 test('each render uses its selected host for posts, redirects and media retries', async t => {
-  const { createRenderer } = await import('@ruyo/core')
-  const { xAdapter } = await import('@ruyo/x')
-  const { bilibiliAdapter } = await import('@ruyo/bilibili')
+  const { createRenderer } = await import('@ruyojs/core')
+  const { xAdapter } = await import('@ruyojs/x')
+  const { bilibiliAdapter } = await import('@ruyojs/bilibili')
   const globalFetch = t.mock.method(globalThis, 'fetch', () => assert.fail('unexpected direct fetch'))
   const photo = 'https://pbs.twimg.com/media/test.jpg'
   const xCalls = []
@@ -136,7 +136,7 @@ test('reject missing payloads, restricted upstreams, unsupported types and broke
 })
 
 test('a separately registered layout renders through the public core API', async () => {
-  const { createRenderer } = await import('@ruyo/core')
+  const { createRenderer } = await import('@ruyojs/core')
   const adapter = {
     resolve(url) {
       if (url.hostname !== 'example.org') return
@@ -160,9 +160,9 @@ function textLayout(text, family) {
 }
 
 test('adapter font overrides take priority and missing glyphs fall back to the host', async () => {
-  const { createRenderer } = await import('@ruyo/core')
-  const { xAdapter } = await import('@ruyo/x')
-  const { bilibiliAdapter } = await import('@ruyo/bilibili')
+  const { createRenderer } = await import('@ruyojs/core')
+  const { xAdapter } = await import('@ruyojs/x')
+  const { bilibiliAdapter } = await import('@ruyojs/bilibili')
   assert.equal(bilibiliAdapter.fonts, undefined)
   const latin = xAdapter.fonts.find(face => face.file.pathname.endsWith('/Chirp-Regular.latin.ttf'))
   assert.ok(latin)
@@ -215,7 +215,7 @@ test('X clamps wide viewports to the 600px timeline column before rendering', as
 })
 
 test('macOS host fallback paints distinct Chinese and emoji glyphs without bundled fonts', { skip: process.platform !== 'darwin' }, async () => {
-  const { createRenderer } = await import('@ruyo/core')
+  const { createRenderer } = await import('@ruyojs/core')
   const renderer = createRenderer({ adapters: [{
     resolve(url) {
       const text = decodeURIComponent(url.pathname.slice(1))
@@ -232,7 +232,7 @@ test('macOS host fallback paints distinct Chinese and emoji glyphs without bundl
 })
 
 test('system font preflight batches new paragraphs, preserves pixels and skips cached cards', async t => {
-  const { createRenderer } = await import('@ruyo/core')
+  const { createRenderer } = await import('@ruyojs/core')
   const { default: childProcess } = await import('node:child_process')
   const { syncBuiltinESMExports } = await import('node:module')
   const exec = t.mock.method(childProcess, 'execFileSync')
@@ -283,7 +283,7 @@ test('system font preflight batches new paragraphs, preserves pixels and skips c
 })
 
 test('the painter preserves draw order and rectangular clips at fractional DPR', async () => {
-  const { createRenderer } = await import('@ruyo/core')
+  const { createRenderer } = await import('@ruyojs/core')
   const red = { kind: 'rect', x: 0, y: 0, width: 40, height: 24, paint: { fill: [255, 0, 0, 255] } }
   const blue = { ...red, paint: { fill: [0, 0, 255, 255] } }
   const scene = {

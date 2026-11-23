@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { inspectLayout, sampleImage } from '../../../test/inspect-layout.mjs'
 import { test } from 'node:test'
-import { bilibiliAdapter } from '@ruyo/bilibili'
+import { bilibiliAdapter } from '@ruyojs/bilibili'
 
 test('renders visible interaction counts in toolbar order with Bilibili units', async () => {
   const url = new URL('https://t.bilibili.com/123')

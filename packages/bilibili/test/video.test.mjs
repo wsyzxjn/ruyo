@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { createRenderer } from '@ruyo/core'
-import { bilibiliAdapter } from '@ruyo/bilibili'
+import { createRenderer } from '@ruyojs/core'
+import { bilibiliAdapter } from '@ruyojs/bilibili'
 import { inspectLayout, sampleImage } from '../../../test/inspect-layout.mjs'
 
 const bvid = 'BV17x411w7KC'

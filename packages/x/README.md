@@ -1,11 +1,11 @@
-# @ruyo/x
+# @ruyojs/x
 
 X adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders X posts as PNG cards in the light desktop timeline style.
 
 ## Install
 
 ```sh
-npm install @ruyo/core @ruyo/x
+npm install @ruyojs/core @ruyojs/x
 ```
 
 Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every platform.
@@ -13,8 +13,8 @@ Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every plat
 ## Usage
 
 ```ts
-import { createRenderer } from '@ruyo/core'
-import { xAdapter } from '@ruyo/x'
+import { createRenderer } from '@ruyojs/core'
+import { xAdapter } from '@ruyojs/x'
 
 const { render } = createRenderer({ adapters: [xAdapter] })
 const { png } = await render('https://x.com/jack/status/20')

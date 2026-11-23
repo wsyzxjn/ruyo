@@ -23,7 +23,7 @@ importers:
 
   packages/bilibili:
     devDependencies:
-      '@ruyo/core':
+      '@ruyojs/core':
         specifier: workspace:^
         version: link:../core
 
@@ -35,37 +35,37 @@ importers:
         specifier: ^12.0.0
         version: 12.0.0
     devDependencies:
-      '@ruyo/core':
+      '@ruyojs/core':
         specifier: workspace:^
         version: link:../core
 
   packages/ruyo:
     dependencies:
-      '@ruyo/bilibili':
+      '@ruyojs/bilibili':
         specifier: workspace:^
         version: link:../bilibili
-      '@ruyo/core':
+      '@ruyojs/core':
         specifier: workspace:^
         version: link:../core
-      '@ruyo/github':
+      '@ruyojs/github':
         specifier: workspace:^
         version: link:../github
-      '@ruyo/x':
+      '@ruyojs/x':
         specifier: workspace:^
         version: link:../x
-      '@ruyo/youtube':
+      '@ruyojs/youtube':
         specifier: workspace:^
         version: link:../youtube
 
   packages/x:
     devDependencies:
-      '@ruyo/core':
+      '@ruyojs/core':
         specifier: workspace:^
         version: link:../core
 
   packages/youtube:
     devDependencies:
-      '@ruyo/core':
+      '@ruyojs/core':
         specifier: workspace:^
         version: link:../core
 

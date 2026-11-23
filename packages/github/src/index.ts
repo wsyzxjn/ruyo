@@ -1,5 +1,5 @@
-import { RuyoError, type Adapter, type NetworkHost, type PrepareText } from '@ruyo/core'
-import { loadImage, loadImages } from '@ruyo/core/adapter'
+import { RuyoError, type Adapter, type NetworkHost, type PrepareText } from '@ruyojs/core'
+import { loadImage, loadImages } from '@ruyojs/core/adapter'
 
 import { displayUrl, formatCount, read, type Actor, type Preview } from './api.js'
 import { commit, profile, release } from './resources.js'

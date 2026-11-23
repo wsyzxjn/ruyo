@@ -1,5 +1,5 @@
-import { RuyoError, type NetworkHost } from '@ruyo/core'
-import { request } from '@ruyo/core/adapter'
+import { RuyoError, type NetworkHost } from '@ruyojs/core'
+import { request } from '@ruyojs/core/adapter'
 import { DomUtils as dom, parseDocument } from 'htmlparser2'
 import { article } from './details.js'
 import { excerpt, formatCount, type Preview } from './api.js'

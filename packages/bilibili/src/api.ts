@@ -1,5 +1,5 @@
-import { RuyoError, type NetworkHost } from '@ruyo/core'
-import { request } from '@ruyo/core/adapter'
+import { RuyoError, type NetworkHost } from '@ruyojs/core'
+import { request } from '@ruyojs/core/adapter'
 
 export const statOrder = ['like', 'coin', 'favorite', 'forward', 'comment'] as const
 export type StatKind = typeof statOrder[number]

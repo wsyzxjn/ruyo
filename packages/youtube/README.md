@@ -1,11 +1,11 @@
-# @ruyo/youtube
+# @ruyojs/youtube
 
 YouTube adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders YouTube videos and Shorts as PNG cards with the thumbnail, title, and channel name.
 
 ## Install
 
 ```sh
-npm install @ruyo/core @ruyo/youtube
+npm install @ruyojs/core @ruyojs/youtube
 ```
 
 Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every platform.
@@ -13,8 +13,8 @@ Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every plat
 ## Usage
 
 ```ts
-import { createRenderer } from '@ruyo/core'
-import { youtubeAdapter } from '@ruyo/youtube'
+import { createRenderer } from '@ruyojs/core'
+import { youtubeAdapter } from '@ruyojs/youtube'
 
 const { render } = createRenderer({ adapters: [youtubeAdapter] })
 const { png } = await render('https://youtu.be/jNQXAC9IVRw')

@@ -1,5 +1,5 @@
-import { RuyoError, type Adapter, type PrepareText } from '@ruyo/core'
-import { loadImage, request } from '@ruyo/core/adapter'
+import { RuyoError, type Adapter, type PrepareText } from '@ruyojs/core'
+import { loadImage, request } from '@ruyojs/core/adapter'
 
 function videoLink(url: URL) {
   let id: string | null | undefined

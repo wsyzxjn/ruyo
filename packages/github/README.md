@@ -1,11 +1,11 @@
-# @ruyo/github
+# @ruyojs/github
 
 GitHub adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders GitHub repositories, issues, pull requests, releases, commits, discussions, and profiles as PNG cards.
 
 ## Install
 
 ```sh
-npm install @ruyo/core @ruyo/github
+npm install @ruyojs/core @ruyojs/github
 ```
 
 Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every platform.
@@ -13,8 +13,8 @@ Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every plat
 ## Usage
 
 ```ts
-import { createRenderer } from '@ruyo/core'
-import { githubAdapter } from '@ruyo/github'
+import { createRenderer } from '@ruyojs/core'
+import { githubAdapter } from '@ruyojs/github'
 
 const { render } = createRenderer({ adapters: [githubAdapter] })
 const { png } = await render('https://github.com/nodejs/node/pull/1')
@@ -41,8 +41,8 @@ The adapter calls the GitHub REST API anonymously, which GitHub limits to 60 req
 To raise the limit, send a token to the API through a custom `fetch`:
 
 ```ts
-import { createRenderer, type NetworkHost } from '@ruyo/core'
-import { githubAdapter } from '@ruyo/github'
+import { createRenderer, type NetworkHost } from '@ruyojs/core'
+import { githubAdapter } from '@ruyojs/github'
 
 const host: NetworkHost = {
   fetch(input, init) {

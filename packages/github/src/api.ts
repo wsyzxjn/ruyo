@@ -1,5 +1,5 @@
-import type { NetworkHost } from '@ruyo/core'
-import { request } from '@ruyo/core/adapter'
+import type { NetworkHost } from '@ruyojs/core'
+import { request } from '@ruyojs/core/adapter'
 
 export interface Actor {
   login: string

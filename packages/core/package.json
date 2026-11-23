@@ -1,0 +1,49 @@
+{
+  "name": "@ruyo/core",
+  "version": "0.1.0",
+  "description": "Renderer and adapter API behind Ruyo link preview cards",
+  "keywords": [
+    "ruyo",
+    "link-preview",
+    "preview-card",
+    "renderer",
+    "wasm"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsyzxjn/ruyo.git",
+    "directory": "packages/core"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./adapter": {
+      "types": "./dist/adapter.d.ts",
+      "import": "./dist/adapter.js"
+    }
+  },
+  "files": [
+    "dist",
+    "wasm",
+    "system-fonts",
+    "licenses"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-wasm.mjs ruyo_renderer && tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "imports": {
+    "#wasm": "./wasm/ruyo_renderer.js"
+  }
+}

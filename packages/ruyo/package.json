@@ -1,0 +1,50 @@
+{
+  "name": "ruyo",
+  "version": "0.1.0",
+  "description": "Turn links from X, Bilibili, GitHub, and YouTube into PNG preview cards in Node.js",
+  "keywords": [
+    "link-preview",
+    "preview-card",
+    "og-image",
+    "screenshot",
+    "twitter",
+    "bilibili",
+    "github",
+    "youtube"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsyzxjn/ruyo.git",
+    "directory": "packages/ruyo"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@ruyo/core": "workspace:^",
+    "@ruyo/x": "workspace:^",
+    "@ruyo/bilibili": "workspace:^",
+    "@ruyo/github": "workspace:^",
+    "@ruyo/youtube": "workspace:^"
+  }
+}

@@ -1,0 +1,18 @@
+[package]
+name = "ruyo-renderer"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+serde.workspace = true
+takumi = { version = "=2.22.1", default-features = false, features = ["raster-backend", "image-decoding", "svg-source", "unstable"] }
+wasm-bindgen.workspace = true
+serde-wasm-bindgen.workspace = true
+takumi-core = { version = "=0.39.0", default-features = false, features = ["svg-raster"] }
+ruyo-layout.workspace = true
+tiny-skia = { version = "0.12", default-features = false, features = ["std"] }
+png = "0.18"

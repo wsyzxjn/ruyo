@@ -1,0 +1,77 @@
+# Publish to npm with Changesets and Trusted Publishing (no NPM_TOKEN).
+#
+# 1. CI passes on a push to main.
+# 2. This workflow runs for that exact commit. With pending changesets, it opens
+#    or updates the Version PR. Without them, it publishes unpublished versions.
+#
+# Each package needs a Trusted Publisher on npmjs.com:
+#   GitHub Actions, user wsyzxjn, repository ruyo, workflow filename release.yml
+
+name: Release
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+
+concurrency:
+  group: release-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  release:
+    name: version or publish
+    # Only a successful push CI on this repository's main, never PR or fork runs.
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+        with:
+          # Release exactly the commit CI verified.
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Enable pnpm
+        run: corepack enable pnpm
+
+      - name: Use trusted-publishing npm
+        run: npm install -g npm@11.16.0
+
+      # ci:publish builds the WebAssembly before publishing.
+      - name: Install Rust (rust-toolchain.toml)
+        run: rustup toolchain install
+
+      - name: Install wasm-bindgen CLI
+        uses: taiki-e/install-action@fe3acb53a98b62c772db35de75ce0e4595e7ca8c # v2.90.8
+        with:
+          tool: wasm-bindgen@0.2.100
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Create Version PR or publish
+        uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+        with:
+          pr-base-branch: main
+          version-script: pnpm run ci:version
+          publish-script: pnpm run ci:publish
+          pr-title: "chore(release): version packages"
+          commit-message: "chore(release): version packages"
+          create-github-releases: true

@@ -1,0 +1,50 @@
+{
+  "name": "@ruyo/bilibili",
+  "version": "0.1.0",
+  "description": "Bilibili adapter for Ruyo: render Bilibili videos and dynamics as PNG cards",
+  "keywords": [
+    "ruyo",
+    "ruyo-adapter",
+    "bilibili",
+    "link-preview"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsyzxjn/ruyo.git",
+    "directory": "packages/bilibili"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "wasm",
+    "assets"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-wasm.mjs ruyo_bilibili && tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@ruyo/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@ruyo/core": "workspace:^"
+  },
+  "imports": {
+    "#wasm": "./wasm/ruyo_bilibili.js"
+  }
+}

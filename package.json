@@ -1,0 +1,25 @@
+{
+  "name": "ruyo-workspace",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsyzxjn/ruyo.git"
+  },
+  "packageManager": "pnpm@10.34.5",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r --if-present run test",
+    "typecheck": "pnpm -r run typecheck",
+    "check:pack": "pnpm -r exec publint --strict",
+    "changeset": "changeset",
+    "ci:version": "changeset version",
+    "ci:publish": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@types/node": "^24",
+    "publint": "^0.3.25",
+    "typescript": "^6.0.3"
+  }
+}

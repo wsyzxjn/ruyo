@@ -1,0 +1,54 @@
+{
+  "name": "@ruyo/x",
+  "version": "0.1.0",
+  "description": "X (Twitter) adapter for Ruyo: render X posts as PNG cards",
+  "keywords": [
+    "ruyo",
+    "ruyo-adapter",
+    "x",
+    "twitter",
+    "tweet",
+    "link-preview"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsyzxjn/ruyo.git",
+    "directory": "packages/x"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "wasm",
+    "licenses",
+    "fonts",
+    "assets"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-wasm.mjs ruyo_x && tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@ruyo/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@ruyo/core": "workspace:^"
+  },
+  "imports": {
+    "#wasm": "./wasm/ruyo_x.js"
+  }
+}

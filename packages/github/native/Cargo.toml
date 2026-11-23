@@ -1,0 +1,15 @@
+[package]
+name = "ruyo-github"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen.workspace = true
+serde-wasm-bindgen.workspace = true
+serde.workspace = true
+ruyo-layout.workspace = true
+js-sys = "0.3"

@@ -1,0 +1,49 @@
+{
+  "name": "@ruyo/youtube",
+  "version": "0.1.0",
+  "description": "YouTube adapter for Ruyo: render YouTube videos and Shorts as PNG cards",
+  "keywords": [
+    "ruyo",
+    "ruyo-adapter",
+    "youtube",
+    "link-preview"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsyzxjn/ruyo.git",
+    "directory": "packages/youtube"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "wasm"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-wasm.mjs ruyo_youtube && tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@ruyo/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@ruyo/core": "workspace:^"
+  },
+  "imports": {
+    "#wasm": "./wasm/ruyo_youtube.js"
+  }
+}

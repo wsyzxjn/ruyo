@@ -10,7 +10,7 @@ Requires Node.js 24 or later.
 
 ```ts
 import { writeFile } from 'node:fs/promises'
-import { render } from 'ruyo'
+import { render } from '@ruyojs/ruyo'
 
 const { png, width, height } = await render('https://x.com/jack/status/20')
 await writeFile('post.png', png)
@@ -87,7 +87,7 @@ Failures throw a `RuyoError`. Check its `code`:
 Every request, including images, goes through `host.fetch`, which defaults to the global `fetch`. Pass your own to add headers, use a proxy, or cache responses. This one sends a GitHub token to the API only:
 
 ```ts
-import { render, type NetworkHost } from 'ruyo'
+import { render, type NetworkHost } from '@ruyojs/ruyo'
 
 const host: NetworkHost = {
   fetch(input, init) {
@@ -114,7 +114,7 @@ On Linux, Ruyo finds fonts through Fontconfig (`fc-match`). Install fonts that c
 
 ## Choosing adapters
 
-The `ruyo` package includes all four platforms. To include only some, combine `@ruyojs/core` with the adapters you need:
+The `@ruyojs/ruyo` package includes all four platforms. To include only some, combine `@ruyojs/core` with the adapters you need:
 
 ```ts
 import { createRenderer } from '@ruyojs/core'

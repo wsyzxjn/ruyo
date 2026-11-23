@@ -1,6 +1,6 @@
 # @ruyojs/core
 
-The renderer behind [ruyo](https://www.npmjs.com/package/ruyo). Use it to include only the platforms you need, or to write your own adapter.
+The renderer behind [@ruyojs/ruyo](https://www.npmjs.com/package/@ruyojs/ruyo). Use it to include only the platforms you need, or to write your own adapter.
 
 ## Install
 
@@ -29,7 +29,7 @@ const { png } = await render('https://x.com/jack/status/20', { width: 480 })
 await writeFile('post.png', png)
 ```
 
-`createRenderer({ adapters, host? })` returns a `render(url, options?, host?)` function with the same options, errors, and network behavior as the one in [ruyo](https://www.npmjs.com/package/ruyo). Adapters are tried in order, and the first one that recognizes the link renders it. `host` sets the default network host for every call.
+`createRenderer({ adapters, host? })` returns a `render(url, options?, host?)` function with the same options, errors, and network behavior as the one in [@ruyojs/ruyo](https://www.npmjs.com/package/@ruyojs/ruyo). Adapters are tried in order, and the first one that recognizes the link renders it. `host` sets the default network host for every call.
 
 The package also exports `RuyoError` and the types used here and below.
 

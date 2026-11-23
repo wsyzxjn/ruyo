@@ -1,11 +1,11 @@
-# ruyo
+# @ruyojs/ruyo
 
 Turn links from X, Bilibili, GitHub, and YouTube into PNG preview cards. Runs in Node.js without a browser.
 
 ## Install
 
 ```sh
-npm install ruyo
+npm install @ruyojs/ruyo
 ```
 
 Requires Node.js 24 or later.
@@ -14,7 +14,7 @@ Requires Node.js 24 or later.
 
 ```ts
 import { writeFile } from 'node:fs/promises'
-import { render } from 'ruyo'
+import { render } from '@ruyojs/ruyo'
 
 const { png, width, height } = await render('https://github.com/nodejs/node')
 await writeFile('card.png', png)
@@ -56,7 +56,7 @@ Failures throw a `RuyoError`. Check its `code`:
 Every request, images included, goes through `host.fetch`, which defaults to the global `fetch`. Pass your own to add headers, use a proxy, or cache responses. This one sends a GitHub token to the GitHub API only:
 
 ```ts
-import { render, type NetworkHost } from 'ruyo'
+import { render, type NetworkHost } from '@ruyojs/ruyo'
 
 const host: NetworkHost = {
   fetch(input, init) {
@@ -79,4 +79,4 @@ X cards use fonts bundled with `@ruyojs/x`. Other cards use the system fonts of 
 
 ## Only some platforms
 
-`ruyo` includes every adapter. To include only some, or to add your own, use [@ruyojs/core](https://www.npmjs.com/package/@ruyojs/core).
+`@ruyojs/ruyo` includes every adapter. To include only some, or to add your own, use [@ruyojs/core](https://www.npmjs.com/package/@ruyojs/core).

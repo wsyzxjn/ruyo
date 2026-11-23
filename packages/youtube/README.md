@@ -1,6 +1,6 @@
 # @ruyojs/youtube
 
-YouTube adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders YouTube videos and Shorts as PNG cards with the thumbnail, title, and channel name.
+YouTube adapter for [Ruyo](https://www.npmjs.com/package/@ruyojs/ruyo). Renders YouTube videos and Shorts as PNG cards with the thumbnail, title, and channel name.
 
 ## Install
 
@@ -8,7 +8,7 @@ YouTube adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders YouTube 
 npm install @ruyojs/core @ruyojs/youtube
 ```
 
-Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every platform.
+Or install [@ruyojs/ruyo](https://www.npmjs.com/package/@ruyojs/ruyo), which includes every platform.
 
 ## Usage
 

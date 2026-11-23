@@ -1,6 +1,6 @@
 # @ruyojs/bilibili
 
-Bilibili adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders Bilibili videos and dynamics as PNG cards.
+Bilibili adapter for [Ruyo](https://www.npmjs.com/package/@ruyojs/ruyo). Renders Bilibili videos and dynamics as PNG cards.
 
 ## Install
 
@@ -8,7 +8,7 @@ Bilibili adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders Bilibil
 npm install @ruyojs/core @ruyojs/bilibili
 ```
 
-Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every platform.
+Or install [@ruyojs/ruyo](https://www.npmjs.com/package/@ruyojs/ruyo), which includes every platform.
 
 ## Usage
 

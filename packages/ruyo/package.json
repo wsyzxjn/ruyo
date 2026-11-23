@@ -1,5 +1,5 @@
 {
-  "name": "ruyo",
+  "name": "@ruyojs/ruyo",
   "version": "0.1.0",
   "description": "Turn links from X, Bilibili, GitHub, and YouTube into PNG preview cards in Node.js",
   "keywords": [

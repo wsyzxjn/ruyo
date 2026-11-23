@@ -1,6 +1,6 @@
 # @ruyojs/github
 
-GitHub adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders GitHub repositories, issues, pull requests, releases, commits, discussions, and profiles as PNG cards.
+GitHub adapter for [Ruyo](https://www.npmjs.com/package/@ruyojs/ruyo). Renders GitHub repositories, issues, pull requests, releases, commits, discussions, and profiles as PNG cards.
 
 ## Install
 
@@ -8,7 +8,7 @@ GitHub adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders GitHub re
 npm install @ruyojs/core @ruyojs/github
 ```
 
-Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every platform.
+Or install [@ruyojs/ruyo](https://www.npmjs.com/package/@ruyojs/ruyo), which includes every platform.
 
 ## Usage
 

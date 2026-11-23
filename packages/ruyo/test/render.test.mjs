@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { render } from 'ruyo'
+import { render } from '@ruyojs/ruyo'
 
 const id = '9007199254740993123'
 const xUrl = 'https://x.com/example/status/' + id

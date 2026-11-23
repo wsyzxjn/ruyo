@@ -1,6 +1,6 @@
 # @ruyojs/x
 
-X adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders X posts as PNG cards in the light desktop timeline style.
+X adapter for [Ruyo](https://www.npmjs.com/package/@ruyojs/ruyo). Renders X posts as PNG cards in the light desktop timeline style.
 
 ## Install
 
@@ -8,7 +8,7 @@ X adapter for [Ruyo](https://www.npmjs.com/package/ruyo). Renders X posts as PNG
 npm install @ruyojs/core @ruyojs/x
 ```
 
-Or install [ruyo](https://www.npmjs.com/package/ruyo), which includes every platform.
+Or install [@ruyojs/ruyo](https://www.npmjs.com/package/@ruyojs/ruyo), which includes every platform.
 
 ## Usage
 

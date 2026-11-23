@@ -30,8 +30,7 @@
     "licenses"
   ],
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "scripts": {
     "build": "node ../../scripts/build-wasm.mjs ruyo_github && tsc",

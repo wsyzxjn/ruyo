@@ -2,11 +2,15 @@
 
 Ruyo turns links from X, Bilibili, GitHub, and YouTube into PNG preview cards. It runs in Node.js and doesn't need a browser.
 
-> **Not on npm yet.** To try Ruyo, [build it from source](#build-from-source).
+## Install
 
-## Usage
+```sh
+npm install @ruyojs/ruyo
+```
 
 Requires Node.js 24 or later.
+
+## Usage
 
 ```ts
 import { writeFile } from 'node:fs/promises'
@@ -186,7 +190,7 @@ pnpm test
 
 `rustup toolchain install` sets up the Rust version and WebAssembly target pinned in `rust-toolchain.toml`. To release a change, add a changeset with `pnpm changeset`.
 
-Then add it to your project:
+To use a local build in another project:
 
 ```sh
 pnpm add link:/path/to/Ruyo/packages/ruyo
